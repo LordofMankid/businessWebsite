@@ -10,11 +10,42 @@
         body {
             background-color: rgb(228, 247, 255);
         }
+
+        .banner {
+            margin-top: 50px;
+            margin:auto;
+            width: 60%;
+            height: 60%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .banner::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            background-image: url("img/clean-room.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            -webkit-filter: blur(0px);
+            /* Safari 6.0 - 9.0 */
+            filter: blur(0x);
+        }
     </style>
 </head>
 
 <body>
 
+    <section class="banner">
+        <h1 class="serif item">Our Services</h1>
+    </section>
     <section class="header">
 
         <div class="item">
@@ -27,8 +58,8 @@
 
     </section>
 
-    <div class="banner2">
-        <h2>Who are we?</h1>>
+    <div class="banner2 reduced-width">
+        <h2 class="serif">Who are we?</h2>
     </div>
 
     <div class="reduced-width content">
