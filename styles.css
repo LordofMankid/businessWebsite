@@ -176,6 +176,10 @@ FORMATTING
     position: relative;
 }
 
+.fixed-item {
+    position:absolute;
+}
+
 .left-indent {
     margin-left: 15px;
 }
@@ -269,6 +273,13 @@ li {
     background-position: -1px 8px;
 }
 
+img.icon {
+    width: 50;
+    bottom: 50px;
+    right: 50;
+    position: fixed;
+    z-index: 1000;
+}
 
 /* 
 
@@ -280,8 +291,16 @@ FONT SIZING
     h1 { font-size: 16px}
     h2 {font-size: 14px}
     a {font-size: 14px}
+    img.icon {
+        width: 25;
+        bottom: 25px;
+        right: 25;
+        position: fixed;
+        z-index: 1000;
+    }
 }
 
 @media only screen and (min-width: 701px) {
     h1 { font-size: 72px}
 }
+
