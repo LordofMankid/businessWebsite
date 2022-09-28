@@ -7,6 +7,7 @@
 /* added fonts to everything*/
 h1,
 h2,
+h3,
 p,
 a,
 ul {
@@ -16,17 +17,19 @@ ul {
 a {
     color: inherit;
     text-decoration: none;
+    font-family: inherit;
 }
 
 body {
     margin: 0px;
+    background-color: whitesmoke;
 }
 
 
 .header {
     width: 100%;
     height: 50px;
-    background: slategray;
+    background: rgb(4, 13, 30);
     border: 1px solid #CCC;
     position: fixed;
     border: 0px;
@@ -35,6 +38,7 @@ body {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
 
 }
 
@@ -42,30 +46,66 @@ body {
 h2.head {
     margin-left: 50px;
     margin-right: 50px;
-    color: orange;
+    color: white;
     text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .button:hover {
     text-decoration: underline;
 }
 
-.content {
+
+.rcorners {
+    display: block;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: white;
     width: 100%;
-    height: auto;
-
-
+    max-width: 300px;
+    height: 100%;
+    max-height: 200px;
+    margin: auto;
+    border: 2px solid rgb(4, 13, 30);
+    padding: 10px;
+    box-shadow: 4px 6px 8px;
 }
 
-/*flex container*/
+.rcorners h3 {
+    text-align: center;
+}
+
+.full-row {
+    flex-basis: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.reduced-width {
+    width: 60%
+}
+
+.item {
+    position: relative;
+    text-align: center;
+}
+
+.padded {
+    padding: 50px;
+}
+
+/*flex containers*/
 .banner {
     margin-top: 50px;
     width: 100%;
-    height: 40%;
+    height: 60%;
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    text-align: center;
 
 
 }
@@ -73,42 +113,86 @@ h2.head {
 .banner::before {
     content: "";
     position: absolute;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    background-image: url("img/anime-girl-maid-4k-ia.jpg");
+    background-image: url("img/cleaning.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     -webkit-filter: blur(2px);
     /* Safari 6.0 - 9.0 */
     filter: blur(2px);
-    z-index:0;
 }
 
-.item {
-    position: relative;
+.banner2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(4, 13, 30);
+    z-index: 1;
+    padding: 10px;
+
 }
 
+.footer {
+    display: flex;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 20%;
+    padding-top: 50px;
+    justify-content: space-around;
+
+}
+
+.content {
+    margin: auto;
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: white;
+
+}
+
+
+/* 
+
+FONT SETTINGS 
+
+*/
 h1 {
-    color: rgb(13, 49, 116);
+    color: rgb(4, 13, 30);
     font-size: 72px;
     text-align: center;
 }
-
+.serif {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 h2 {
-    color: orange;
+    color: white;
     text-align: center;
 }
 
-
-
-p {
-    color: slategray;
-
+h3 {
+    color: rgb(4, 13, 30);
 }
 
-a {}
+ul.no-bullet {
+    list-style-type: none;
+}
 
-ul {}
+li {
+    background: url(img/broom.png);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-position: -1px 8px;
+}
