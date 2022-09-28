@@ -6,10 +6,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ayo wassup my dudes" />
+    <style>
+        .banner {
+            width: 100%;
+            height: 40%;
+            background: rgba(0, 0, 0, 0.4) url("img/kitchen.jpg") no-repeat;
+            background-size: cover;
+            background-blend-mode: multiply;
+        }
+
+        .content {
+            padding-top: 20px;
+        }
+
+        button {
+            display: block;
+            margin-left: 90%;
+            border-radius: 25px;
+            background-color: rgb(4, 13, 30);
+            width: 10%;
+            max-width: 300px;
+            height: 100%;
+            max-height: 200px;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: rgb(21, 64, 143);
+        }
+    </style>
 </head>
 
 <body>
 
+    <!--Header at the top -->
     <section class="header">
 
         <div class="item">
@@ -19,21 +50,58 @@
             <h2 class="head"> <a class="button" href="services.html">SERVICES</a> &nbsp <a class="button"
                     href="contacts.html">CONTACTS</a></h2>
         </div>
-    
+
     </section>
 
+    <!-- Banner -->
+    <section class="banner">
+        <h1 class="serif white">Questions?</h1>
+    </section>
+
+    <article class="banner2 full-row">
+        <h2 class="full-width"> Contact Us! </h2>
+    </article>
+
+    <!-- Form -->
     <section class="content">
-        
-        <h2> Contact Us! </h2>
 
-        <form>
-            <label for="username">Name:</label>
-            <input type="text" id="username">
-            <label for="email">Email:</label>
-            <input type="email" id="email">
-        </form>
+        <div class="full-row">
+            <p class="centered"> Questions? Concerns? Suggestions? Just fill out this quick form and we'll get back to
+                you as soon as possible.</p>
+        </div>
+
+        <div class="item reduced-width">
+            <form>
+                <label for="username">Name:</label>
+                <input type="text" id="username" placeholder="Your name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Your email">
+                <label for="textarea">Message:</label>
+                <textarea id="message" cols="35" rows="20" wrap="soft" placeholder="Type your message here!"></textarea>
+            </form>
+            <button type="button">Submit</button>
+        </div>
+
     </section>
-    
+
+    <!-- Ending Banner-->
+    <div class="banner2">
+        <h2>Call us today!</h1>>
+    </div>
+
+    <!-- Footer -->
+    <section class="footer">
+
+        <div class="item">
+            <p><a class="button" href="services.html">About our services</a></p>
+        </div>
+
+        <div class="item">
+            <p><a class="button" href="contacts.html">Contact Us!</a></h2>
+            </p>
+        </div>
+
+    </section>
 </body>
 
 

@@ -10,6 +10,30 @@
         body {
             background-color: rgb(228, 247, 255);
         }
+
+        .banner {
+            width: 100%;
+            height: 60%;
+
+        }
+
+        .banner::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            background: url("img/cleaning.jpg") rgba(0, 0, 0, 0.3);
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-repeat: no-repeat;
+            -webkit-filter: blur(2px);
+            /* Safari 6.0 - 9.0 */
+            filter: blur(2px);
+        }
+
     </style>
 </head>
 
@@ -45,7 +69,7 @@
 
         <h1 class="serif full-row">Spotless houses at half the price.</h1>
 
-        
+
 
         <div class="rcorners">
             <h3> The best deal.</h3>
@@ -59,7 +83,8 @@
             <h3> The best brand. </h3>
             <ul class="no-bullet">
                 <li>We have simply have the best cleaners.</li>
-                <li>With over 200 years of combined housekeeping experience, our staff will make sure your house stays clean.</li>
+                <li>With over 200 years of combined housekeeping experience, our staff will make sure your house stays
+                    clean.</li>
             </ul>
         </div>
 

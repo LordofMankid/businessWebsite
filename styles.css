@@ -6,7 +6,8 @@ h2,
 h3,
 p,
 a,
-ul {
+ul,
+form {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
@@ -52,12 +53,11 @@ h2.head {
 
 .button {
     color: inherit;
-    transition: color 0.3s, text-decoration 1s;
+    transition: color 0.2s, text-decoration 1s;
 }
 
 .button:hover {
     color: rgb(70, 69, 143);
-    text-decoration: underline;
 }
 
 
@@ -75,57 +75,25 @@ h2.head {
     box-shadow: 4px 6px 8px;
 }
 
-.rcorners h3 {
-    text-align: center;
-}
 
-.full-row {
-    flex-basis: 100%;
-}
+/*
 
-.full-width {
-    width: 100%;
-}
+FLEX CONTAINERS
 
-.reduced-width {
-    width: 60%
-}
+*/
 
-.item {
-    position: relative;
-    text-align: center;
-}
-
-.padded {
-    padding: 50px;
-}
-
-/*flex containers*/
 .banner {
     margin-top: 50px;
+    margin: auto;
+    width: 60%;
     height: 60%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-
-}
-
-.banner::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    background-image: url("img/cleaning.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    -webkit-filter: blur(2px);
-    /* Safari 6.0 - 9.0 */
-    filter: blur(2px);
 }
 
 
@@ -147,7 +115,7 @@ h2.head {
     display: flex;
     background-color: whitesmoke;
     width: 100%;
-    height: 20%;
+    height: 10%;
     padding-top: 50px;
     justify-content: space-around;
 
@@ -162,23 +130,111 @@ h2.head {
     align-items: center;
     justify-content: center;
     gap: 50px 20px;
+    background-color: white;
     padding-top: 100px;
     padding-bottom: 100px;
-    background-color: white;
-
 
 }
 
-.background {
-    background-color: (245, 245, 245, 20);
+/*
+
+FORMATTING
+
+*/
+
+.bckgrnd {
+    position: relative;
+    background-color: grey;
+    z-index: 1;
+}
+
+.white {
+    color: white;
+}
+
+.centered {
+    text-align: center;
+}
+
+.rcorners h3 {
+    text-align: center;
+}
+
+.full-row {
+    flex-basis: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.reduced-width {
+    width: 60%
+}
+
+.item {
+    position: relative;
+}
+
+.left-indent {
+    margin-left: 15px;
+}
+.padded {
+    padding: 50px;
+}
+
+/*
+
+FORM SETTINGS
+
+*/
+
+input[type=text] {
+    margin: 5px;
+    border: 1px;
+    box-shadow: 0 0 15px 4px rgba(4, 13, 30, 0.1);
+    padding: 10px 20px;
+    border-radius: 6px;
+    width:100%;
+    font-family: inherit;
+}
+
+input[type=email] {
+    margin: 5px;
+    border: 1px;
+    box-shadow: 0 0 15px 4px rgba(4, 13, 30, 0.1);
+    padding: 10px 20px;
+    border-radius: 6px;
+    width:100%;
+    font-family: inherit;
 }
 
 
+input[type=textarea] {
+    margin: 10px;
+    border: 1px;
+    box-shadow: 0 0 15px 4px rgba(4, 13, 30, 0.1);
+    padding: 10% 40px;
+    border-radius: 6px;
+    width:100%;
+    font-family: inherit;
+}
+
+textarea {
+    margin: 5px;
+    padding: 5px;
+    border: 1px;
+    box-shadow: 0 0 15px 4px rgba(4, 13, 30, 0.1);
+    border-radius: 6px;
+    width:100%;
+    font-family:inherit;
+}
 /* 
 
 FONT SETTINGS 
 
 */
+
 h1 {
     color: rgb(4, 13, 30);
     font-size: 72px;
